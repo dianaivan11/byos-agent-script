@@ -434,7 +434,7 @@ if ($runAsUser)
 
    if ($interactive)
    {
-      Log-Message "Configuring agent to reboot, autologon, and run unelevated as $username with interactive UI"
+      Log-Message "Configuring agent to reboot, autologon, and run unelevated as $username with interactive UI \n In case of failure check the agent logs"
       $configParameters = " --unattended --url $url --pool ""$pool"" --auth pat --replace --runAsAutoLogon --overwriteAutoLogon --windowsLogonAccount $username --windowsLogonPassword $password --token $token $runArgs $extra"
       try
       {
